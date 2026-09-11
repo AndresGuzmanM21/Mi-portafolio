@@ -1,55 +1,272 @@
-body{
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
 
-font-family: 'Poppins', sans-serif;
-
-background:#f8f9fa;
-
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f9fa;
+  color: #212529;
+  margin: 0;
 }
 
-.navbar{
+/* =========================
+   NAVBAR
+========================= */
 
-box-shadow:0 5px 20px rgba(163, 6, 6, 0.2);
-
+.navbar {
+  box-shadow: 0 5px 20px rgba(163, 6, 6, 0.2);
 }
 
-section{
-
-padding-top:80px;
-
-padding-bottom:80px;
-
+.navbar-brand {
+  color: #ffffff !important;
 }
 
-.card{
-
-border:none;
-
-transition:.3s;
-
+.nav-link {
+  transition: 0.3s;
 }
 
-.card:hover{
-
-transform:translateY(-10px);
-
+.nav-link:hover {
+  color: #ec3143 !important;
 }
 
-img{
+/* =========================
+   SECCIONES
+========================= */
 
-border:6px solid #ec3143;
-
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
-.badge{
+/* =========================
+   HERO
+========================= */
 
-font-size:18px;
-
-width:120px;
-
+#inicio {
+  min-height: 550px;
+  display: flex;
+  align-items: center;
 }
 
-footer{
+#inicio h1 {
+  color: #212529;
+}
 
-margin-top:50px;
+#inicio h2 {
+  font-weight: 600;
+}
 
+#inicio p {
+  line-height: 1.8;
+}
+
+/* =========================
+   FOTO DE PERFIL
+========================= */
+
+#inicio img {
+  border: 6px solid #ec3143;
+  transition: 0.3s;
+}
+
+#inicio img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+section h2 {
+  font-weight: 700;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #ec3143;
+  margin: 15px auto 0;
+  border-radius: 5px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+/* =========================
+   CARDS DE PROYECTOS
+========================= */
+
+#proyectos .card {
+  height: 100%;
+}
+
+#proyectos .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border: none;
+}
+
+#proyectos .card h4 {
+  font-weight: 700;
+}
+
+#proyectos .card p {
+  line-height: 1.6;
+}
+
+/* =========================
+   HABILIDADES
+========================= */
+
+#habilidades .card {
+  background: #ffffff;
+}
+
+.badge {
+  font-size: 16px;
+  min-width: 110px;
+  padding: 12px 15px !important;
+  display: inline-block;
+  margin: 4px;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn {
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-danger {
+  background: #ec3143;
+  border-color: #ec3143;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+  border-color: #c82333;
+  transform: translateY(-2px);
+}
+
+.btn-dark:hover {
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   EXPERIENCIA
+========================= */
+
+#experiencia .card h4 {
+  font-weight: 700;
+}
+
+#experiencia .card p {
+  line-height: 1.7;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+#contacto {
+  margin-top: 0;
+}
+
+#contacto a {
+  text-decoration: none;
+}
+
+#contacto a:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  margin-top: 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  #inicio {
+    min-height: auto;
+    text-align: center;
+  }
+
+  #inicio h1 {
+    font-size: 2.2rem;
+  }
+
+  #inicio h2 {
+    font-size: 1.5rem;
+  }
+
+  #inicio img {
+    width: 220px;
+    margin-bottom: 25px;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .badge {
+    min-width: 100px;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   PANTALLAS PEQUEÑAS
+========================= */
+
+@media (max-width: 480px) {
+  #inicio h1 {
+    font-size: 1.9rem;
+  }
+
+  #inicio h2 {
+    font-size: 1.3rem;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
 }
